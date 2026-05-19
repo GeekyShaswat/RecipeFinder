@@ -87,11 +87,6 @@ android {
             applicationIdSuffix = ".staging"
             versionNameSuffix = "-staging"
 
-            buildConfigField(
-                "String",
-                "API_KEY",
-                "\"MY_KEY\""
-            )
         }
     }
 

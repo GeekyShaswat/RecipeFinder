@@ -43,7 +43,7 @@ class MealDetailViewModel @Inject constructor(
                     MealDetailUiState.Error("Meal not found")
                 }
             } catch (e: Exception) {
-                _uiState.value = MealDetailUiState.Error(e.message ?: "Something went wrong")
+                _uiState.value = MealDetailUiState.Error(e.toString())
             }
         }
     }

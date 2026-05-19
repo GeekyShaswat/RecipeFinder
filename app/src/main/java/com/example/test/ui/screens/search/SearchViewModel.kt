@@ -27,7 +27,7 @@ class SearchViewModel @Inject constructor(
                 _uiState.value = if (meals.isNullOrEmpty()) SearchUiState.Empty
                 else SearchUiState.Success(meals)
             } catch (e: Exception) {
-                _uiState.value = SearchUiState.Error(e.message ?: "Something went wrong")
+                _uiState.value = SearchUiState.Error(e.toString())
             }
         }
     }

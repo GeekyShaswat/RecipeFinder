@@ -29,7 +29,7 @@ class CategoryViewModel @Inject constructor(
                 val response = repository.getCategories()
                 _uiState.value = CategoryUiState.Success(response.categories)
             } catch (e: Exception) {
-                _uiState.value = CategoryUiState.Error(e.message ?: "Something went wrong")
+                _uiState.value = CategoryUiState.Error(e.toString())
             }
         }
     }

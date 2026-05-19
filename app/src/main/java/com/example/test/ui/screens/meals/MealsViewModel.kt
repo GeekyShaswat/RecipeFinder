@@ -33,7 +33,7 @@ class MealsViewModel @Inject constructor(
                 val response = repository.getMealsByCategory(categoryName)
                 _uiState.value = MealsUiState.Success(response.meals ?: emptyList())
             } catch (e: Exception) {
-                _uiState.value = MealsUiState.Error(e.message ?: "Something went wrong")
+                _uiState.value = MealsUiState.Error(e.toString())
             }
         }
     }
